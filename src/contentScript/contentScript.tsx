@@ -1,9 +1,9 @@
-chrome.runtime.sendMessage('I am loading content script', (response) => {
-    console.log(response);
-    console.log('I am content script')
+import React from "react";
+import "./contentScript.css"
+function contentScript() {
+    return (
+        <div className={"content-root"}>Hello</div>
+    )
+}
 
-})
-
-window.onload = (event) => {
-    console.log('page is fully loaded');
-};
+export default contentScript

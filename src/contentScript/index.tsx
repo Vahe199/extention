@@ -1,9 +1,28 @@
-chrome.runtime.sendMessage('I am loading content script', (response) => {
-    console.log(response);
-    console.log('I am content script')
+import React from "react";
+import { createRoot } from "react-dom/client";
+import ContentScript from "./contentScript";
 
-})
 
-window.onload = (event) => {
-    console.log('page is fully loaded');
-};
+function init() {
+    const appContainer = document.createElement('div')
+    document.body.appendChild(appContainer)
+    if (!appContainer) {
+        throw new Error("Can not find AppContainer");
+    }
+    const root = createRoot(appContainer)
+    // console.log(appContainer)
+    root.render(<ContentScript />);
+}
+
+init();
+
+
+// chrome.runtime.sendMessage('I am loading content script', (response) => {
+//     console.log(response);
+//     console.log('I am content script')
+//
+// })
+//
+// window.onload = (event) => {
+//     console.log('page is fully loaded');
+// };

@@ -3,33 +3,28 @@
   "name": "Reading Calculation",
   "description": "Add the reading time to Chrome Extension documentation articles",
   "version": "1.0.0",
-  "action": {
-    "default_title": "Click Me",
-    "default_popup": "popup.html",
-    "default_icon": "icon_16.png"
-  },
-  "chrome_url_overrides": {
-    "/*_comment_for_nevTab_*/newtab": "newTab.html"
-  },
   "permissions": [
-   "tabs" ,
+    "tabs" ,
     "bookmarks",
     "storage",
     "identity"
   ],
-  "icons": {
-    "16": "icon_16.png",
-    "32": "icon_32.png",
-    "48": "icon_48.png",
-    "128": "icon_128.png"
+  "action": {
+    "default_icon": {
+      "16": "icon_16.png",
+      "32": "icon_32.png",
+      "48": "icon_48.png",
+      "128": "icon_128.png"
+    }
   },
+
   "options_page": "options.html",
   "background": {
     "service_worker": "background.js"
   },
   "content_scripts": [
     {
-      "matches": ["https://*.google.com/*"],
+      "matches": ["<all_urls>"],
       "js": ["contentScript.js"]
     }
   ]

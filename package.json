@@ -6,7 +6,8 @@
   "scripts": {
     "watch": "webpack --watch --progress --config webpack.dev.js",
     "build": "webpack  --progress --config webpack.prod.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss build src/assets/tailwind.css -o public/styles.css"
   },
   "author": "",
   "license": "ISC",

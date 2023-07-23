@@ -1,8 +1,9 @@
 import React from "react";
 import "./contentScript.css"
+import "../../public/styles.css"
 function contentScript() {
     return (
-        <div className={"content-root"}>Hello</div>
+        <div className={"content-root text-xs"}>Hello</div>
     )
 }
 

@@ -5,4 +5,11 @@
     width: 100px;
     height: 100px;
     background-color: red;
+    display: flex;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
